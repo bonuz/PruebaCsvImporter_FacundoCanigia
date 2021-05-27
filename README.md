@@ -1,4 +1,4 @@
-# PruebaCsvImporter_FacundoCanigia
+# CsvImporter - Facundo Canigia
 
 ## Requirements:
 - desarrollar un programa de consola .NET Core en C#, que lea un fichero .csv e inserte su contenido en una BD
@@ -17,8 +17,20 @@
 ## Stack:
 
 .Net Core 3.1
+
 MS SQL Server Express 2019
 
 ### Libraries:
+System.Net.WebClient
+Microsoft.Extensions.Configuration
+System.Data.SqlClient
+
+## Test files:
+Original: https://storage10082020.blob.core.windows.net/y9ne9ilzmfld/Stock.CSV
+1000 rows w/header: https://csvimporteraa.blob.core.windows.net/csvfiles/OriginalStock_1000Rows.CSV
+30 rowsw/header: https://csvimporteraa.blob.core.windows.net/csvfiles/OriginalStock_30Rows.CSV
+
+
+
 
 

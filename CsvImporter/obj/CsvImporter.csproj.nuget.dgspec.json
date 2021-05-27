@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\DEV\\CSharp\\CsvImporter\\CsvImporter\\CsvImporter.csproj": {}
+    "C:\\DEV\\CSharp\\CsvImporter\\CsvImporter\\CsvImporter.csproj": {}
   },
   "projects": {
-    "c:\\DEV\\CSharp\\CsvImporter\\CsvImporter\\CsvImporter.csproj": {
+    "C:\\DEV\\CSharp\\CsvImporter\\CsvImporter\\CsvImporter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\DEV\\CSharp\\CsvImporter\\CsvImporter\\CsvImporter.csproj",
+        "projectUniqueName": "C:\\DEV\\CSharp\\CsvImporter\\CsvImporter\\CsvImporter.csproj",
         "projectName": "CsvImporter",
-        "projectPath": "c:\\DEV\\CSharp\\CsvImporter\\CsvImporter\\CsvImporter.csproj",
+        "projectPath": "C:\\DEV\\CSharp\\CsvImporter\\CsvImporter\\CsvImporter.csproj",
         "packagesPath": "C:\\Users\\fiacka\\.nuget\\packages\\",
-        "outputPath": "c:\\DEV\\CSharp\\CsvImporter\\CsvImporter\\obj\\",
+        "outputPath": "C:\\DEV\\CSharp\\CsvImporter\\CsvImporter\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\fiacka\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,40 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Azure.Storage.Blobs": {
+              "target": "Package",
+              "version": "[12.8.4, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.CommandLine": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
