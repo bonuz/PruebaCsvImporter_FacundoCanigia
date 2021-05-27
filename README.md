@@ -17,13 +17,15 @@
 ## Stack:
 
 .Net Core 3.1
-
 MS SQL Server Express 2019
 
 ### Libraries:
-System.Net.WebClient
 Microsoft.Extensions.Configuration
+Microsoft.Extensions.DependencyInjection
+Microsoft.Extensions.Hosting
+System.Net.WebClient
 System.Data.SqlClient
+
 
 ## Test files:
 Original: https://storage10082020.blob.core.windows.net/y9ne9ilzmfld/Stock.CSV
@@ -31,6 +33,35 @@ Original: https://storage10082020.blob.core.windows.net/y9ne9ilzmfld/Stock.CSV
 30 rowsw/header: https://csvimporteraa.blob.core.windows.net/csvfiles/OriginalStock_30Rows.CSV
 
 
+## Database
 
+Importer
 
+### Tables
+
+#### dbo.Stock
+| Row | Type |
+| ------ | ------ |
+| StockId | int |
+| PointOfSale |varchar(50) |
+| Product | varchar(50)|
+| Date | varchar(50) |
+|Stock | int |
+
+#### dbo.DownloadedFiles
+| Row | Type |
+| ------ | ------ |
+| FileId | int |
+| DownloadDate | datetime |
+| FileName | varchar(50) |
+| CorrectRows | int |
+| IncorrectRows | int |
+
+#### dbo.Errors
+| Row | Type |
+| ------ | ------ |
+| ErrorId | int |
+| FileId | int |
+| Data | varchar(200) |
+| Importdate | datetime |
 
