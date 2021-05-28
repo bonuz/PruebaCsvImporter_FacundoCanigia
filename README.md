@@ -15,16 +15,16 @@
 - por último, si consideras necessário agregar algo de testing automatizado para ganar más confianza, ¡nunca viene mal!
 
 ## Stack:
-
-.Net Core 3.1
-MS SQL Server Express 2019
+ 
+.Net Core 3.1  
+MS SQL Server Express 2019 
 
 ### Libraries:
-Microsoft.Extensions.Configuration
-Microsoft.Extensions.DependencyInjection
-Microsoft.Extensions.Hosting
-System.Net.WebClient
-System.Data.SqlClient
+Microsoft.Extensions.Configuration  
+Microsoft.Extensions.DependencyInjection  
+Microsoft.Extensions.Hosting  
+System.Net.WebClient  
+System.Data.SqlClient  
 
 
 ## Test files:
