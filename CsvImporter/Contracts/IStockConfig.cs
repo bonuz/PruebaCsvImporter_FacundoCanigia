@@ -9,6 +9,7 @@ namespace CsvImporter.Contracts
         string ConnectionString { get; }
         string DestinationFolder { get; }
         string FileUrl { get;  }
-
+        string Title { get; }
+        int BatchSize { get; }
     }
 }

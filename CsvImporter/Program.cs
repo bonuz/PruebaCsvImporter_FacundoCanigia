@@ -1,4 +1,5 @@
 ﻿using CsvImporter.Contracts;
+using CsvImporter.DAL;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -10,13 +11,11 @@ namespace CsvImporter
     {
 
         private readonly IImporter _importer;
-        private readonly IStockConfig _config;
         private readonly ILogger<Program> _logger;
 
-        public Program(IImporter importer, IStockConfig config, ILogger<Program> logger)
+        public Program(IImporter importer, ILogger<Program> logger)
         {
             this._importer = importer;
-            this._config = config;
             this._logger = logger;
         }
 
@@ -24,14 +23,12 @@ namespace CsvImporter
         {
             var host = CreateHostBuilder(args).Build();
             host.Services.GetRequiredService<Program>().Run();
+            host.Dispose();
         }
 
         public void Run()
         {
             _logger.LogInformation("Start");
-            //string connString = _config.ConnectionString;
-            //string destinationFolder = _config.DestinationFolder;
-            //string fileUrl = _config.FileUrl;
             _importer.ImportFile();
             _logger.LogInformation("End");
         }
@@ -45,6 +42,8 @@ namespace CsvImporter
                     services.AddTransient<IDownloader, Downloader>();
                     services.AddTransient<IImporter, CsvImporter>();
                     services.AddSingleton<IStockConfig, StockConfig>();
+                    services.AddTransient<IStopWatch, StopWatch>();
+                    services.AddScoped<IStockDAL, StockDAL>();
                     services.AddLogging();
                 });
         }

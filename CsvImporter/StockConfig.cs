@@ -36,5 +36,22 @@ namespace CsvImporter
                 return this._configuration["CSVImporter:FileUrl"];
             }
         }
+
+        public string Title
+        {
+            get
+            {
+                return this._configuration["CSVImporter:Title"];
+            }
+        }
+
+        public int BatchSize
+        {
+            get
+            {
+                return Convert.ToInt32(this._configuration["CSVImporter:BatchSize"]);
+            }
+        }
+
     }
 }

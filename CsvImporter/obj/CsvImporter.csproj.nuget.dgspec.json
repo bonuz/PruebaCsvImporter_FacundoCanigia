@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\DEV\\CSharp\\CsvImporter\\CsvImporter\\CsvImporter.csproj": {}
+    "C:\\DEV\\CSharp\\CsvImporter\\CsvImporter\\CsvImporter.csproj": {}
   },
   "projects": {
-    "c:\\DEV\\CSharp\\CsvImporter\\CsvImporter\\CsvImporter.csproj": {
+    "C:\\DEV\\CSharp\\CsvImporter\\CsvImporter\\CsvImporter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\DEV\\CSharp\\CsvImporter\\CsvImporter\\CsvImporter.csproj",
+        "projectUniqueName": "C:\\DEV\\CSharp\\CsvImporter\\CsvImporter\\CsvImporter.csproj",
         "projectName": "CsvImporter",
-        "projectPath": "c:\\DEV\\CSharp\\CsvImporter\\CsvImporter\\CsvImporter.csproj",
+        "projectPath": "C:\\DEV\\CSharp\\CsvImporter\\CsvImporter\\CsvImporter.csproj",
         "packagesPath": "C:\\Users\\fiacka\\.nuget\\packages\\",
-        "outputPath": "c:\\DEV\\CSharp\\CsvImporter\\CsvImporter\\obj\\",
+        "outputPath": "C:\\DEV\\CSharp\\CsvImporter\\CsvImporter\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\fiacka\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,9 +40,9 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
-            "Azure.Storage.Blobs": {
+            "FastMember": {
               "target": "Package",
-              "version": "[12.8.4, )"
+              "version": "[1.5.0, )"
             },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",

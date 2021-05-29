@@ -17,6 +17,7 @@
 ## Stack:
  
 .Net Core 3.1  
+C# 
 MS SQL Server Express 2019 
 
 ### Libraries:
@@ -26,16 +27,14 @@ Microsoft.Extensions.Hosting
 System.Net.WebClient  
 System.Data.SqlClient  
 
-
 ## Test files:
-Original: https://storage10082020.blob.core.windows.net/y9ne9ilzmfld/Stock.CSV
-1000 rows w/header: https://csvimporteraa.blob.core.windows.net/csvfiles/OriginalStock_1000Rows.CSV
-30 rowsw/header: https://csvimporteraa.blob.core.windows.net/csvfiles/OriginalStock_30Rows.CSV
-
+Original: https://storage10082020.blob.core.windows.net/y9ne9ilzmfld/Stock.CSV  
+1000 rows w/header: https://csvimporteraa.blob.core.windows.net/csvfiles/OriginalStock_1000Rows.CSV  
+30 rowsw/header: https://csvimporteraa.blob.core.windows.net/csvfiles/OriginalStock_30Rows.CSV  
 
 ## Database
 
-Importer
+Name: Importer
 
 ### Tables
 
