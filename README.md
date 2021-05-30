@@ -12,7 +12,7 @@
 - podrás usar las librerías que creas oportuno.
 - también nos gustaría saber el porqué de las decisiones que tomaste (y también de las que descartaste).
 - si acompañas el proyecto con un buen README.md, ¡nos harías muy felices!
-- por último, si consideras necessário agregar algo de testing automatizado para ganar más confianza, ¡nunca viene mal!
+- por último, si consideras necesario agregar algo de testing automatizado para ganar más confianza, ¡nunca viene mal!
 
 ## Stack:
  
@@ -21,11 +21,13 @@ C#
 MS SQL Server Express 2019 
 
 ### Libraries:
+FastMember 
 Microsoft.Extensions.Configuration  
 Microsoft.Extensions.DependencyInjection  
 Microsoft.Extensions.Hosting  
 System.Net.WebClient  
 System.Data.SqlClient  
+NUnit  
 
 ## Test files:
 Original: https://storage10082020.blob.core.windows.net/y9ne9ilzmfld/Stock.CSV  
@@ -45,7 +47,7 @@ Name: Importer
 | PointOfSale |varchar(50) |
 | Product | varchar(50)|
 | Date | varchar(50) |
-|Stock | int |
+| Stock | int |
 
 #### dbo.DownloadedFiles
 | Row | Type |
@@ -53,14 +55,6 @@ Name: Importer
 | FileId | int |
 | DownloadDate | datetime |
 | FileName | varchar(50) |
-| CorrectRows | int |
-| IncorrectRows | int |
+| InsertedRows | int |
 
-#### dbo.Errors
-| Row | Type |
-| ------ | ------ |
-| ErrorId | int |
-| FileId | int |
-| Data | varchar(200) |
-| Importdate | datetime |
 

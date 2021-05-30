@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\DEV\\CSharp\\CsvImporter\\CsvImporter\\CsvImporter.csproj": {}
+    "c:\\DEV\\CSharp\\CsvImporter\\CsvImporter\\CsvImporter.csproj": {}
   },
   "projects": {
-    "C:\\DEV\\CSharp\\CsvImporter\\CsvImporter\\CsvImporter.csproj": {
+    "c:\\DEV\\CSharp\\CsvImporter\\CsvImporter\\CsvImporter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\DEV\\CSharp\\CsvImporter\\CsvImporter\\CsvImporter.csproj",
+        "projectUniqueName": "c:\\DEV\\CSharp\\CsvImporter\\CsvImporter\\CsvImporter.csproj",
         "projectName": "CsvImporter",
-        "projectPath": "C:\\DEV\\CSharp\\CsvImporter\\CsvImporter\\CsvImporter.csproj",
+        "projectPath": "c:\\DEV\\CSharp\\CsvImporter\\CsvImporter\\CsvImporter.csproj",
         "packagesPath": "C:\\Users\\fiacka\\.nuget\\packages\\",
-        "outputPath": "C:\\DEV\\CSharp\\CsvImporter\\CsvImporter\\obj\\",
+        "outputPath": "c:\\DEV\\CSharp\\CsvImporter\\CsvImporter\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\fiacka\\AppData\\Roaming\\NuGet\\NuGet.Config",

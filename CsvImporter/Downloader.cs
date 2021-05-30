@@ -1,7 +1,6 @@
 ﻿using CsvImporter.Contracts;
 using Microsoft.Extensions.Logging;
 using System;
-using System.Diagnostics;
 using System.Net;
 
 namespace CsvImporter
@@ -19,15 +18,13 @@ namespace CsvImporter
             _stopwatch = stopWatch;
         }
 
-        public string DownloadCSV(string fileUrl)
+        public string DownloadCSV()
         {
-            return "";
             string timeStamp = GetTimestamp(DateTime.Now);
             string fileName = timeStamp + "_stock.CSV";
-
-            // read destination from config file
-            //string csvDestination = "C:\\DEV\\CSharp\\CsvImporter\\CsvImporter\\DownloadedFiles\\" + fileName;
+            string fileUrl = _config.FileUrl;
             string csvDestination = _config.DestinationFolder + fileName;
+
             WebClient myWebClient = new WebClient();
 
             try
@@ -35,8 +32,6 @@ namespace CsvImporter
                 _logger.LogInformation("Downloading File", fileUrl);
                 _stopwatch.Start();
 
-                // write statistics down: size, number of rows
-                // try to add a download %
                 myWebClient.DownloadFile(fileUrl, csvDestination);
 
                 _stopwatch.Stop();

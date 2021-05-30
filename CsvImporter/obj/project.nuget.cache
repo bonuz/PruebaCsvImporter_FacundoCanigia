@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EXT15rR2qozA8wUL+XMIbOR37W6aXrx94W2MgtEdC/LHoqJmyaK6J+QA+EPHeSY6DAvkjID5k1kDkjN+4Sww7w==",
+  "dgSpecHash": "pWwirmR7DQZci3pFuHvHQyI6DfLpXYcnQciPogLgoaCAvYLQbwrwP+t/1T0/3ON9V1SOsLFQ+AKdiIla8peZOA==",
   "success": true,
-  "projectFilePath": "C:\\DEV\\CSharp\\CsvImporter\\CsvImporter\\CsvImporter.csproj",
+  "projectFilePath": "c:\\DEV\\CSharp\\CsvImporter\\CsvImporter\\CsvImporter.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\fiacka\\.nuget\\packages\\fastmember\\1.5.0\\fastmember.1.5.0.nupkg.sha512",
     "C:\\Users\\fiacka\\.nuget\\packages\\microsoft.extensions.configuration\\5.0.0\\microsoft.extensions.configuration.5.0.0.nupkg.sha512",

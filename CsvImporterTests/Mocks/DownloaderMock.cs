@@ -3,11 +3,28 @@ using CsvImporter.Contracts;
 
 namespace CsvImporterTests.Mocks
 {
-    public class DownloaderMock : CsvImporter.Contracts.IDownloader
+    public class DownloaderMock1000Rows : CsvImporter.Contracts.IDownloader
     {
-        string IDownloader.DownloadCSV(string fileUrl)
+        string IDownloader.DownloadCSV()
         {
-            return "C:\\DEV\\CSharp\\CsvImporter\\Files\\OriginalStock.CSV";
+            return "OriginalStock_1000Rows.CSV";
         }
     }
+
+    public class DownloaderMock30Rows : CsvImporter.Contracts.IDownloader
+    {
+        string IDownloader.DownloadCSV()
+        {
+            return "OriginalStock_30Rows.CSV";
+        }
+    }
+
+    public class DownloaderMockOriginalFile : CsvImporter.Contracts.IDownloader
+    {
+        string IDownloader.DownloadCSV()
+        {
+            return "OriginalStock.CSV";
+        }
+    }
+
 }

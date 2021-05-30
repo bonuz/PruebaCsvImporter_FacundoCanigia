@@ -9,5 +9,7 @@ namespace CsvImporter.Contracts
     {
         public void CleanStockTable();
         public void UpdateDownloadedFileInformation(DownloadedFile file);
+        public int ReadNumberOfRowsInStock();
+
     }
 }

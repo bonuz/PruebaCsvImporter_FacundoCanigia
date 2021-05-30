@@ -6,6 +6,6 @@ namespace CsvImporter.Contracts
 {
     public interface IDownloader
     {
-        string DownloadCSV(string fileUrl);
+        string DownloadCSV();
     }
 }

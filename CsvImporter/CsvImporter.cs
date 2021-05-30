@@ -37,19 +37,15 @@ namespace CsvImporter
 
         public void ImportFile()
         {
-            //var fileName = _downloader.DownloadCSV("https://storage10082020.blob.core.windows.net/y9ne9ilzmfld/Stock.CSV");
-            string fileName = _downloader.DownloadCSV(_config.FileUrl);
-            string filePath = _config.DestinationFolder + fileName;
-
-            filePath = "C:\\DEV\\CSharp\\CsvImporter\\Files\\OriginalStock.CSV";
-
-            InsertStockValues(filePath);
+            string fileName = _downloader.DownloadCSV();
+            InsertStockValues(fileName);
         }
 
-        public void InsertStockValues(string filePath)
+        public void InsertStockValues(string fileName)
         {
             _stockDAL.CleanStockTable();
 
+            string filePath = _config.DestinationFolder + fileName;
             DownloadedFile downloadedFile;
             string connString = _config.ConnectionString;
             int batchSize = _config.BatchSize;
@@ -57,9 +53,6 @@ namespace CsvImporter
             _stopWatch.Start();
 
             List<Stock> stocks = GetStockList(filePath);
-
-            // generating a datatable takes almost 2 minutes, double as making a list
-            // GetStockToInsert(filePath);
 
             _stopWatch.Stop();
             _logger.LogInformation("Elapsed time to open file and transform to object list {0}", _stopWatch.GetElapsedTime());
@@ -88,7 +81,7 @@ namespace CsvImporter
 
             _stockDAL.UpdateDownloadedFileInformation(downloadedFile);
 
-            Console.ReadKey();
+            //Console.ReadKey();
             // Cleanup
         }
 
@@ -98,7 +91,6 @@ namespace CsvImporter
 
             foreach (String record in GetRecordsList(filePath))
             {
-                //Console.WriteLine(record);
                 if (record != "")
                 {
                     Stock stock = new Stock();

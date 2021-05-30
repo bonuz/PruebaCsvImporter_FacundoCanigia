@@ -23,7 +23,7 @@ namespace CsvImporter.DAL
             string connString = _config.ConnectionString;
             using (SqlConnection con = new SqlConnection(connString))
             {
-                SqlCommand cmd = new SqlCommand("SELECT * FROM DownloadedFiles", con)
+                SqlCommand cmd = new SqlCommand(Query, con)
                 {
                     CommandType = CommandType.Text
                 };
@@ -49,6 +49,30 @@ namespace CsvImporter.DAL
                 cmd.ExecuteNonQuery();
             }
         }
+
+        public int ReadNumberOfRowsInStock()
+        {
+            string query = "select count(1) from dbo.Stock";
+
+            int totalRows = 0;
+
+            string connString = _config.ConnectionString;
+            using (SqlConnection con = new SqlConnection(connString))
+            {
+                SqlCommand cmd = new SqlCommand(query, con)
+                {
+                    CommandType = CommandType.Text
+                };
+                con.Open();
+
+                SqlDataReader rdr = cmd.ExecuteReader();
+
+                if (rdr.Read()) totalRows = rdr.GetInt32(0);
+            }
+
+            return totalRows;
+        }
+
 
         public void CleanStockTable()
         {
