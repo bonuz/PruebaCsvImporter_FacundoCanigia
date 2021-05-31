@@ -27,9 +27,17 @@ namespace CsvImporter
 
         public void Run()
         {
-            _logger.LogInformation("Start");
-            _importer.ImportFile();
-            _logger.LogInformation("End");
+            try
+            {
+                _logger.LogInformation("Start");
+                _importer.ImportFile();
+                _logger.LogInformation("End");
+            }
+            catch (System.Exception ex)
+            {
+                _logger.LogError(ex.Message);
+            }
+            
         }
 
         private static IHostBuilder CreateHostBuilder(string[] args)

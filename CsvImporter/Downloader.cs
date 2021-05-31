@@ -25,14 +25,14 @@ namespace CsvImporter
             string fileUrl = _config.FileUrl;
             string csvDestination = _config.DestinationFolder + fileName;
 
-            WebClient myWebClient = new WebClient();
+            WebClient webClient = new WebClient();
 
             try
             {
                 _logger.LogInformation("Downloading File", fileUrl);
                 _stopwatch.Start();
 
-                myWebClient.DownloadFile(fileUrl, csvDestination);
+                webClient.DownloadFile(fileUrl, csvDestination);
 
                 _stopwatch.Stop();
 
@@ -44,6 +44,10 @@ namespace CsvImporter
             catch (Exception)
             {
                 throw;
+            }
+            finally
+            {
+                webClient.Dispose();
             }
         }
 

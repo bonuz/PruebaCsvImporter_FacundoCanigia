@@ -82,7 +82,6 @@ namespace CsvImporter
             _stockDAL.UpdateDownloadedFileInformation(downloadedFile);
 
             //Console.ReadKey();
-            // Cleanup
         }
 
         private List<Stock> GetStockList(string filePath)
@@ -98,8 +97,13 @@ namespace CsvImporter
                     stock.PointOfSale = textpart[0];
                     stock.Product = textpart[1];
                     stock.Date = textpart[2];
-                    stock.NumberOfItems = Convert.ToInt32(textpart[3].Replace("\r", ""));
-                    stocks.Add(stock);
+                    bool success = Int32.TryParse(textpart[3], out int stockNumber);
+                    //stock.NumberOfItems = Convert.ToInt32(textpart[3].Replace("\r", ""));
+                    if (success)
+                    {
+                        stock.NumberOfItems = stockNumber;
+                        stocks.Add(stock);
+                    }
                 }
             }
 
@@ -123,34 +127,6 @@ namespace CsvImporter
 
             return records;
         }
-
-        private DataTable GetStockToInsert(string filePath)
-        {
-            DataTable dt = new DataTable();
-            dt.Columns.Add(new DataColumn("PointOfSale", typeof(string)));
-            dt.Columns.Add(new DataColumn("Product", typeof(string)));
-            dt.Columns.Add(new DataColumn("Date", typeof(string)));
-            dt.Columns.Add(new DataColumn("Stock", typeof(int)));
-            dt.Columns.Add(new DataColumn("StockId", typeof(int)));
-
-            foreach (String record in GetRecordsList(filePath))
-            {
-                if (record != "")
-                {
-                    string[] textpart = record.Split(';');
-                    var row = dt.NewRow();
-                    row["PointOfSale"] = textpart[0];
-                    row["Product"] = textpart[1];
-                    row["Date"] = textpart[2];
-                    row["Stock"] = Convert.ToInt32(textpart[3].Replace("\r", ""));
-
-                    dt.Rows.Add(row);
-                }
-            }
-
-            return dt;
-        }
-
     }
 }
 

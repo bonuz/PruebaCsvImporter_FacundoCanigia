@@ -11,6 +11,14 @@ namespace CsvImporterTests.Mocks
         }
     }
 
+    public class DownloaderMock1000RowsWOTitle : CsvImporter.Contracts.IDownloader
+    {
+        string IDownloader.DownloadCSV()
+        {
+            return "OriginalStock_1000RowsWOTitle.CSV";
+        }
+    }
+
     public class DownloaderMock30Rows : CsvImporter.Contracts.IDownloader
     {
         string IDownloader.DownloadCSV()

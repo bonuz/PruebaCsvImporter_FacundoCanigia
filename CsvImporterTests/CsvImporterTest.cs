@@ -51,6 +51,19 @@ namespace CsvImporterTests
         }
 
         [Test]
+        public void ImportTestFile1000RowsWithoutTitleInFile()
+        {
+            _mockDownloader = new Mocks.DownloaderMock1000Rows();
+            CsvImporter.CsvImporter importer = new CsvImporter.CsvImporter(_mockDownloader, _mockConfig, _logger, _stopWatch, _stockDAL);
+
+            importer.ImportFile();
+
+            int insertedRows = _stockDAL.ReadNumberOfRowsInStock();
+
+            Assert.AreEqual(1000, insertedRows);
+        }
+
+        [Test]
         public void ImportTestFile30Rows()
         {
             _mockDownloader = new Mocks.DownloaderMock30Rows();
