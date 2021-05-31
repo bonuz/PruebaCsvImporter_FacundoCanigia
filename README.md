@@ -63,7 +63,7 @@ Name: Importer
 
 ## Features
 
-### Execution Times and resource usage
+### Execution time and resource usage
 - download file: between 2m and 3m, 100mb connection 
 
 > `Successfully Downloaded File "https://storage10082020.blob.core.windows.net/y9ne9ilzmfld/Stock.CSV" in 00:03:14.12`
@@ -82,28 +82,26 @@ Running from VS 2019 (not code):
 - RAM usage between 3.8gb and 6gb. 
 
 From EXE:
-- Download:
+- Download: 
 ![CsvImporter](/Other/resources.png)
-- Open and parse:
+- Open and parse: 
 ![CsvImporter](/Other/transform.png)
-- Bulk insert:
+- Bulk insert: 
 ![CsvImporter](/Other/bulk.png)
-
 
 ### Configuration file (appsettings.json)
 File: 
 
 ```sh
-{
-	"CSVImporter": {
-		"BatchSize": 10000,
-		"DestinationFolder": "C:\\DEV\\CSharp\\CsvImporter\\CsvImporter\\DownloadedFiles\\",
-		"FileUrl": "https://storage10082020.blob.core.windows.net/y9ne9ilzmfld/Stock.CSV",
-		"Title": "PointOfSale;Product;Date;Stock"
-	},
-	"ConnectionStrings": {  
-		"Default": "Data Source=BONUZKTOP\\FNCSQL;Initial Catalog=Importer;Integrated Security=True;"
-    }  
+"CSVImporter": {
+    "BatchSize": 10000,
+    "DestinationFolder": "C:\\DEV\\CSharp\\CsvImporter\\CsvImporter\\DownloadedFiles\\",
+    "FileUrl": "https://storage10082020.blob.core.windows.net/y9ne9ilzmfld/Stock.CSV",
+    "Title": "PointOfSale;Product;Date;Stock"
+},
+"ConnectionStrings": {  
+    "Default": "Data Source=BONUZKTOP\\FNCSQL;Initial Catalog=Importer;Integrated Security=True;"
+}  
 ```
 #### Parameters
 BatchSize: batch size of the bulk insert can be configured. This will change the ratio between ram and cpu. 
@@ -174,5 +172,5 @@ Also discarded converting the file to an array first, it was as fast as the list
 
 - Auth
 - Tx while inserting
-- Loggig to file
+- Logging to file
 
