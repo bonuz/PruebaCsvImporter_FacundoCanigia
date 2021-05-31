@@ -76,8 +76,19 @@ Name: Importer
 
 > `Elapsed time to insert rows 00:00:45.72`
 
-CPU usage is around 8% during all the process. 
-RAM usage between 3.8gb and 6gb, running from Visual Studio 2019. 
+
+Running from VS 2019 (not code):
+- CPU usage is around 8% during all the process. 
+- RAM usage between 3.8gb and 6gb. 
+
+From EXE:
+- Download:
+![CsvImporter](/Other/resources.png)
+- Open and parse:
+![CsvImporter](/Other/transform.png)
+- Bulk insert:
+![CsvImporter](/Other/bulk.png)
+
 
 ### Configuration file (appsettings.json)
 File: 
