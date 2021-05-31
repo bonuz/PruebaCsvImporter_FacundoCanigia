@@ -1,6 +1,6 @@
 # CsvImporter - Facundo Canigia
 
-<img>https://i.imgur.com/2Ha1fgR.png</img>
+![CsvImporter](https://i.imgur.com/2Ha1fgR.png)
 
 ## Requirements:
 - desarrollar un programa de consola .NET Core en C#, que lea un fichero .csv e inserte su contenido en una BD
