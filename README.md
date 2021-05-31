@@ -83,10 +83,13 @@ Running from VS 2019 (not code):
 
 From EXE:
 - Download: 
+
 ![CsvImporter](/Other/resources.png)
 - Open and parse: 
+
 ![CsvImporter](/Other/transform.png)
 - Bulk insert: 
+
 ![CsvImporter](/Other/bulk.png)
 
 ### Configuration file (appsettings.json)
